@@ -2,8 +2,8 @@ namespace app.core {
   'use strict';
 
   var config = {
-    appErrorPrefix: '[helloworld Error] ',
-    appTitle: 'helloworld'
+    appErrorPrefix: '[My Application Error] ',
+    appTitle: 'My Application'
   };
 
   angular

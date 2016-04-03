@@ -73,3 +73,6 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
+# Ignore Typings
+typings/brower
+typings/main

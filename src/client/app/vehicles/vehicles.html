@@ -1,0 +1,35 @@
+<section id="vehicles-view" class="mainbar">
+  <section class="matter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="widget wviolet">
+            <div ht-widget-header title="Vehicles" allow-collapse="true"></div>
+            <div class="widget-content text-center text-info">
+              <table class="table table-condensed table-striped">
+                <thead>
+                <tr>
+                  <th>Make</th>
+                  <th>Model</th>
+                  <th>Year</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="veh in veh.vehicles">
+                  <td>{{veh.firstName}}</td>
+                  <td>{{veh.lastName}}</td>
+                  <td>{{veh.age}}</td>
+                  <td>{{veh.location}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="widget-foot">
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

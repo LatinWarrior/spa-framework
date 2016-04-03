@@ -11,6 +11,8 @@ import data = require('./data');
 
 router.get('/people', getPeople);
 router.get('/person/:id', getPerson);
+router.get('/vehicles', getVehicles);
+router.get('/vehicles/:id', getVehicle);
 router.get('/*', notFoundMiddleware);
 
 module.exports = router;
@@ -32,5 +34,22 @@ function getPerson(req: express.Request, res: express.Response, next: any) {
         res.status(200).send(person);
     } else {
         send404(req, res, 'person ' + id + ' not found');
+    }
+}
+
+function getVehicles(req: express.Request, res: express.Response, next: any) {
+    res.status(200).send(data.getVehicles());
+}
+
+function getVehicle(req: express.Request, res: express.Response, next: any) {
+    var id = +req.params.id;
+    var vehicle = data.getVehicles().filter(function(v) {
+        return v.id === id;
+    })[0];
+
+    if (vehicle) {
+        res.status(200).send(vehicle);
+    } else {
+        send404(req, res, 'vehicle ' + id + ' not found');
     }
 }

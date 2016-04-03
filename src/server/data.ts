@@ -12,6 +12,13 @@ namespace data {
         location: string;
     }
 
+    interface IVehicle {
+        id: number;
+        make: string;
+        model: string;
+        year: number;
+    }
+
     export function getPeople() {
         var people: Array<IPeople> = [
             { id: 1, firstName: 'John', lastName: 'Papa', age: 27, location: 'Florida' },
@@ -24,7 +31,20 @@ namespace data {
             { id: 8, firstName: 'Aaron', lastName: 'Jinglehiemer', age: 22, location: 'Utah' }
         ];
         return people;
-    };
+    }
+
+    export function getVehicles(){
+
+            var vehicles: Array<IVehicle> = [
+                {id: 1, make: 'chevrolet', model: 'sonic', year: 2016},
+                {id: 2, make: 'chevrolet', model: 'cruze', year: 2016},
+                {id: 3, make: 'chevrolet', model: 'spark', year: 2016},
+                {id: 4, make: 'chevrolet', model: 'impala', year: 2016},
+                {id: 5, make: 'chevrolet', model: 'volt', year: 2016},
+                {id: 6, make: 'chevrolet', model: 'malibu', year: 2016}
+            ];
+        return vehicles;
+    }
 }
 
 export = data;

@@ -22,7 +22,7 @@ namespace app.dashboard {
     }
 
     news = {
-      title: 'helloworld',
+      title: 'My Application',
       description: 'Hot Towel Angular is a SPA template for Angular developers.'
     };
     messageCount: number = 0;
