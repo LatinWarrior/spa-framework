@@ -1,4 +1,5 @@
 /*jshint node:true*/
+"use strict";
 var data;
 (function (data) {
     'use strict';
@@ -16,7 +17,7 @@ var data;
         return people;
     }
     data.getPeople = getPeople;
-    ;
+
 })(data || (data = {}));
 module.exports = data;
 //# sourceMappingURL=data.js.map
